@@ -1,0 +1,28 @@
+.edit-task { 
+  input {
+    height: 60px;
+  } 
+  input[type=button] {
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 5%;
+  }
+  .form-group {
+    label {
+      margin-top: 15px;
+      margin-bottom: 0px;
+    }
+  }
+  label {
+    font-style: oblique;
+    font-weight: bold;
+  }
+  
+}
+#done {
+  cursor:pointer;
+  display:block;
+  height:50px;
+  width:50px;
+  background-repeat:no-repeat;
+}

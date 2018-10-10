@@ -1,0 +1,41 @@
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding-bottom: 100px;
+}
+
+header, footer {
+ width: 100%;
+ background-color: #00415d;
+ min-height: 50px;
+}
+
+header {
+ border-bottom: 5px solid silver;
+}
+
+footer {
+ position: fixed;
+ left: 0; bottom: 0;
+ border-top: 5px solid silver;
+
+ width: 100%;
+}
+
+body {
+ width: 100%;
+ height: 100%;
+ background: #f7f7f7; 
+ font-size: 1em;
+}
+
+h1 {
+  text-align: center; 
+}
+#task-form {
+  width: 50%;
+}
