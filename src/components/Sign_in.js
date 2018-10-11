@@ -11,7 +11,7 @@ class SignIn extends React.Component {
     .then(res => { 
       if ( res.status = 200) {
         localStorage.setItem('user_token', res.data.token)
-          this.props.dispatch(push('tasks'))
+        this.props.dispatch(push('tasks'))
       }
     })
     .catch(err => {
@@ -42,7 +42,7 @@ class SignIn extends React.Component {
         <button type="button" onClick={()=>{this.logIn()}}>Login</button>
       </div>  
       <div className="container create">
-        <p>Do not have an account? <a href="login">Create</a>.</p>
+        <p>Do not have an account? <a href="register">Create</a>.</p>
       </div>
     </form>
       )

@@ -5,7 +5,7 @@ import { syncHistoryWithStore, routerMiddleware } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import configureStore from './store/configure_store' 
 import ReduxToastr from 'react-redux-toastr'
-
+import { destroySession } from './resources/resources'
 ////////////////
 import './css/style'
 import Auth from './components/Auth';
@@ -21,9 +21,10 @@ const store = configureStore(null, middleware);
 const history = syncHistoryWithStore(browserHistory, store);
 
 function requireAuth(component) {
-  if (localStorage.getItem('user_token'))
-    return component
-  else return SignIn
+  // if (localStorage.getItem('user_token'))
+  //   return component
+  // else return SignIn
+  return component
 }
 
 ///////////////
@@ -39,6 +40,13 @@ ReactDOM.render(
       transitionOut="fadeOut"
       progressBar
       closeOnToastrClick/>
+    {localStorage.getItem('user_token') != '' ?
+       <button className='btn btn-info log-out' onClick={() => {
+        destroySession({user_token: localStorage.getItem('user_token')})
+        localStorage.setItem('user_token', '')
+        location.pathname = '/'
+      }}>Log Out</button> : null
+    }
     <Router history={history}>
       <Route path="/" component={Auth} />
       <Route path="/about" component={About} />

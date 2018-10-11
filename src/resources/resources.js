@@ -41,15 +41,12 @@ export function paramsTasks(params) {
 /////////
 
 export function createUser(params) {
-  return axios.post(`http://localhost:3000/api/aplication?user_token=${params.user_params}`)
+  return axios.post(`http://localhost:3000/api/users`, params)
 }
 
 export function updateUser(params) {
   return axios.put(`http://localhost:3000/api/aplication?user_token=${params.confirm_token}`)
 }
 
-export function paramsUser(permit) {
-  return axios.get(`http://localhost:3000/api/aplication?user_token=${permit.confirm_token}`)
-}
 
 /////////

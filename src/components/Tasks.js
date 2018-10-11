@@ -127,7 +127,7 @@ class Tasks extends React.Component {
           <ul className="myUL" >
             { this.showTasks(false) }
           </ul>
-          <hr></hr>
+          <hr className='hr-line'></hr>
           <ul className="myUL" >
             { this.showTasks(true) }
           </ul>
