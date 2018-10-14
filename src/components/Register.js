@@ -16,7 +16,6 @@ class Register extends React.Component {
   }
 
   signUp() {
-    console.log(this.credentials)
     createUser({user: this.credentials})
     .then(res => {
       toastr.success(res.data.message)

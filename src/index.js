@@ -9,7 +9,6 @@ import { destroySession } from './resources/resources'
 ////////////////
 import './css/style'
 import Auth from './components/Auth';
-import About from './components/About';
 import Register from './components/Register';
 import Tasks from './components/Tasks';
 import EditTasks from './components/Edit_tasks';
@@ -49,7 +48,6 @@ ReactDOM.render(
     }
     <Router history={history}>
       <Route path="/" component={Auth} />
-      <Route path="/about" component={About} />
       <Route path="/register" component={Register} />
       <Route path="/tasks" component={requireAuth(Tasks)} />
       <Route path="/edit/:id" component={requireAuth(EditTasks)}/>

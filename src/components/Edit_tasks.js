@@ -52,7 +52,7 @@ class EditTasks extends React.Component {
     updateTask({user_token: localStorage.getItem('user_token'), task: this.state, id: this.state.id})
     .then(res => {
       toastr.success('UPDATED')
-      this.props.dispatch(push('tasks'))
+      this.props.dispatch(push('/tasks'))
     })
     .catch(err => {
       toastr.error(err.response.data.errors)
@@ -65,7 +65,6 @@ class EditTasks extends React.Component {
 
   render() {
     var id = this.props.params.id
-    var task = this.props.task
     return (
       <div className="bordered edit-task container">
         <form id="task-edit-form" >

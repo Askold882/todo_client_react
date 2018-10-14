@@ -5,8 +5,6 @@ import { connect } from 'react-redux';
 
 class SignIn extends React.Component {
   logIn() {
-    console.log(this.email)
-    console.log(this.password)
     createSession({email: this.email, password: this.password})
     .then(res => { 
       if ( res.status = 200) {
