@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const base_url = 'https://ancient-wave-36393.herokuapp.com/';
+const base_url = 'https://young-spire-61946.herokuapp.com/';
 
 export function checkToken(params) {
   return  axios.get(`${base_url}api/sessions?user_token=${params.user_token}`)
