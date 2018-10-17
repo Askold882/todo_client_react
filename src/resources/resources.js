@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 const base_url = 'https://young-spire-61946.herokuapp.com/';
+// const base_url = 'http://localhost:3000/';
 
 export function checkToken(params) {
   return  axios.get(`${base_url}api/sessions?user_token=${params.user_token}`)

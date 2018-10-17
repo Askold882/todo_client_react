@@ -16,7 +16,7 @@ class Register extends React.Component {
   }
 
   signUp() {
-    createUser({user: this.credentials})
+    createUser({user: this.credentials, back_url: 'https://ancient-wave-36393.herokuapp.com/'})
     .then(res => {
       toastr.success(res.data.message)
       this.props.dispatch(push('sign_in'))
